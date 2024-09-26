@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { MdDehaze } from "react-icons/md";
+import { Menu } from "./Menu";
 
 export const NavBar = () => {
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
    const pageList = ["_hello", "_about-me", "_projects"];
    return (
       <header className="text-primary-light-grey border-b-2 border-primary-shadow-green w-full text-xl font-body flex items-center max-h-14 justify-between px-6">
@@ -17,7 +21,15 @@ export const NavBar = () => {
          <span className="hidden pl-6 border-l border-primary-shadow-green h-14 lg:flex items-center">
             _contact-me
          </span>
-         <MdDehaze className=" sm:hidden block fill-primary-light-grey" />
+         <button
+            className="cursor-pointer p-2"
+            onClick={() => {
+               setIsMenuOpen(!isMenuOpen);
+            }}
+         >
+            <MdDehaze className=" sm:hidden block fill-primary-light-grey" />
+         </button>
+         {isMenuOpen && <Menu />}
       </header>
    );
 };

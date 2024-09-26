@@ -4,7 +4,7 @@ import codeImage from "../../assets/code-snippet-2.svg";
 
 export const HomeBanner = () => {
    return (
-      <div className=" grid grid-flow-col p-9 pt-24 max-h-[800px] content-around max-w-6xl md:mt-16 m-auto lg:gap-20 place-items-center">
+      <div className="grid grid-flow-col p-9 pt-24 max-h-[800px] content-around max-w-6xl md:mt-16 m-auto lg:gap-20 place-items-center">
          <div className="grid gap-20">
             <HomeIntroduction />
             <GithubLink />
