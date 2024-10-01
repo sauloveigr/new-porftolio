@@ -20,9 +20,6 @@ export const NavBar = () => {
                ))}
             </div>
          </div>
-         <span className="hidden pl-6 border-l border-primary-shadow-green h-14 lg:flex items-center">
-            _contact-me
-         </span>
          <button
             className="cursor-pointer p-2 z-10"
             onClick={() => {
@@ -36,6 +33,9 @@ export const NavBar = () => {
             )}
          </button>
          {isMenuOpen && <Menu />}
+         <span className="hidden pl-6 border-l border-primary-shadow-green h-14 lg:flex items-center">
+            _contact-me
+         </span>
       </header>
    );
 };
