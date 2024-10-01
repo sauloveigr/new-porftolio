@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { MdDehaze } from "react-icons/md";
+import { MdClose } from "react-icons/md";
+
 import { Menu } from "./Menu";
 
 export const NavBar = () => {
@@ -7,9 +9,9 @@ export const NavBar = () => {
 
    const pageList = ["_hello", "_about-me", "_projects"];
    return (
-      <header className="text-primary-light-grey border-b-2 border-primary-shadow-green w-full text-xl font-body flex items-center max-h-14 justify-between px-6">
-         <div className="flex h-14 items-center">
-            <span className="lg:pr-36">saulo-veiga</span>
+      <header className="text-primary-light-grey border-b-2 border-primary-shadow-green w-full text-xl font-body flex items-center justify-between px-4">
+         <div className="flex items-center">
+            <span className="py-4 ">saulo-veiga</span>
             <div className="hidden lg:flex ">
                {pageList.map((page) => (
                   <span className="px-8 border-x border-primary-shadow-green h-14 flex items-center">
@@ -22,12 +24,16 @@ export const NavBar = () => {
             _contact-me
          </span>
          <button
-            className="cursor-pointer p-2"
+            className="cursor-pointer p-2 z-10"
             onClick={() => {
                setIsMenuOpen(!isMenuOpen);
             }}
          >
-            <MdDehaze className=" sm:hidden block fill-primary-light-grey" />
+            {isMenuOpen ? (
+               <MdClose className="sm:hidden block fill-primary-light-grey" />
+            ) : (
+               <MdDehaze className="sm:hidden block fill-primary-light-grey" />
+            )}
          </button>
          {isMenuOpen && <Menu />}
       </header>
