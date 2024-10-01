@@ -11,7 +11,7 @@ export const NavBar = () => {
    return (
       <header className="text-primary-light-grey border-b-2 border-primary-shadow-green w-full text-xl font-body flex items-center justify-between px-4">
          <div className="flex items-center">
-            <span className="py-4 ">saulo-veiga</span>
+            <span className="py-4 lg:pr-36">saulo-veiga</span>
             <div className="hidden lg:flex ">
                {pageList.map((page) => (
                   <span className="px-8 border-x border-primary-shadow-green h-14 flex items-center">
