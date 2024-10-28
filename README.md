@@ -31,7 +31,7 @@ Install dependencies:
 Run the development server:
 * ``npm run dev``
 
-The app will be available at http://localhost:3000.
+The app will be available at http://localhost:5173/new-porftolio.
 
 ---
 
